@@ -3,8 +3,8 @@ const Datastore = require('nedb');
 const fetch = require('node-fetch');
 const app = express();
 const port = process.env.PORT || 5000;
-app.listen(port, () => {
-  console.log(`Starting server at ${port}`);
+app.listen(PORT, () => {
+  console.log(`Starting server at ${PORT}`);
 });
 app.use(express.static('public'));
 app.use(express.json({ limit: '1mb' }));
