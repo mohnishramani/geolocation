@@ -30,7 +30,7 @@ app.post('/api', (request, response) => {
 });
 
 app.get('*', (req, res) => {
-    res.sendFile(__dirname + '. /public/Index.html');
+    res.sendFile(__dirname + ' /public/Index.html');
 });
 
 app.listen(PORT, () => {
