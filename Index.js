@@ -4,9 +4,7 @@ const fetch = require('node-fetch');
 const app = express();
 
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-    console.log(`Our app is running on port ${PORT}`);
-});
+
 
 app.use(express.static('public'));
 app.use(express.json({ limit: '1mb' }));
@@ -32,5 +30,9 @@ app.post('/api', (request, response) => {
 });
 
 app.get('*', (req, res) => {
-    res.sendFile(__dirname + '/public/index.html');
+    res.sendFile(__dirname + '/public/Index.html');
+});
+
+app.listen(PORT, () => {
+    console.log(`Our app is running on port ${PORT}`);
 });
