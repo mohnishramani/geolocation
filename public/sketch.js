@@ -1,14 +1,11 @@
 function setup() {
     noCanvas();
-    const video = createCapture(VIDEO);
-    video.size(160, 120);
+
     let lat, lon;
     const button = document.getElementById('submit');
     button.addEventListener('click', async event => {
-      const mood = document.getElementById('mood').value;
-      video.loadPixels();
-      const image64 = video.canvas.toDataURL();
-      const data = { lat, lon, mood, image64 };
+      
+      const data = { lat, lon, mood };
       const options = {
         method: 'POST',
         headers: {
